@@ -1,0 +1,1341 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>白棉袜vk - 官方视频门户 | 纯棉生活影像社区</title>
+<meta name="description" content="白棉袜vk官方网站，专注纯棉袜品与舒适生活方式的高清原创视频内容平台，汇聚行业创作者，构建值得信赖的内容生态。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23223c4e'/%3E%3Cpath d='M20 12h10v22c0 6 4 9 10 9s10-3 10-9V12h10v23c0 12-8 19-20 19S20 47 20 35z' fill='%23f2a65a'/%3E%3C/svg%3E">
+<style>
+:root{
+  --wk-ink:#1c2b36;
+  --wk-blue:#223c4e;
+  --wk-blue-soft:#3f6076;
+  --wk-mist:#eef2f4;
+  --wk-paper:#fbfcfd;
+  --wk-line:#d8e1e6;
+  --wk-amber:#e08a3c;
+  --wk-amber-soft:#f6d9bd;
+  --wk-teal:#2f7d74;
+  --wk-radius:14px;
+  --wk-sticky:104px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:var(--wk-sticky)}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  color:var(--wk-ink);
+  background:var(--wk-paper);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul,ol{list-style:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+.wk-wrapper{width:min(1180px,92vw);margin-inline:auto}
+.wk-sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ============ 吸顶区：公告条 + 页头 ============ */
+.wk-sticky-stack{
+  position:sticky;top:0;z-index:70;
+  background:var(--wk-paper);
+  box-shadow:0 1px 0 var(--wk-line),0 8px 22px -18px rgba(28,43,54,.5);
+}
+.wk-notice-bar{
+  background:linear-gradient(90deg,var(--wk-blue) 0%,var(--wk-blue-soft) 60%,var(--wk-teal) 100%);
+  color:#f4f8fa;
+  font-size:13.5px;
+  letter-spacing:.02em;
+}
+.wk-notice-inner{
+  display:flex;align-items:center;gap:14px;
+  padding:9px 0;
+  min-height:40px;
+}
+.wk-notice-tag{
+  flex:none;
+  background:var(--wk-amber);
+  color:#241708;
+  font-weight:700;
+  font-size:11.5px;
+  padding:2px 9px;
+  border-radius:999px;
+  letter-spacing:.08em;
+}
+.wk-notice-scroll{flex:1;overflow:hidden;position:relative;height:22px}
+.wk-notice-track{display:flex;flex-direction:column;animation:wk-notice-roll 18s cubic-bezier(.6,0,.3,1) infinite}
+.wk-notice-track li{height:22px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wk-notice-track li b{color:var(--wk-amber-soft);font-weight:600}
+@keyframes wk-notice-roll{
+  0%,22%{transform:translateY(0)}
+  28%,50%{transform:translateY(-22px)}
+  56%,78%{transform:translateY(-44px)}
+  84%,100%{transform:translateY(-66px)}
+}
+.wk-notice-more{flex:none;font-size:12.5px;border-bottom:1px dashed rgba(255,255,255,.55);white-space:nowrap}
+.wk-header{background:var(--wk-paper)}
+.wk-header-inner{
+  display:flex;align-items:center;gap:22px;
+  padding:14px 0;
+}
+.wk-brand{display:flex;align-items:center;gap:11px;flex:none}
+.wk-brand-mark{
+  width:42px;height:42px;border-radius:12px;flex:none;
+  background:radial-gradient(circle at 30% 25%,#4a7288,#223c4e 70%);
+  display:grid;place-items:center;
+  color:var(--wk-amber-soft);font-weight:800;font-size:17px;letter-spacing:.02em;
+  box-shadow:inset 0 -2px 0 rgba(0,0,0,.18);
+}
+.wk-brand-text b{display:block;font-size:18.5px;letter-spacing:.03em}
+.wk-brand-text span{display:block;font-size:11px;color:var(--wk-blue-soft);letter-spacing:.22em}
+.wk-nav{flex:1;display:flex;gap:4px;flex-wrap:wrap}
+.wk-nav a{
+  font-size:14.5px;padding:7px 12px;border-radius:9px;color:#33454f;
+  transition:background .18s,color .18s;
+}
+.wk-nav a:hover,.wk-nav a:focus-visible{background:var(--wk-mist);color:var(--wk-blue)}
+.wk-header-tools{display:flex;align-items:center;gap:10px;flex:none}
+.wk-search{
+  display:flex;align-items:center;
+  background:var(--wk-mist);border:1px solid var(--wk-line);
+  border-radius:999px;padding:5px 6px 5px 14px;
+  transition:border-color .2s,box-shadow .2s;
+}
+.wk-search:focus-within{border-color:var(--wk-blue-soft);box-shadow:0 0 0 3px rgba(63,96,118,.14)}
+.wk-search input{
+  border:none;background:none;outline:none;font-size:13.5px;width:150px;color:var(--wk-ink);
+}
+.wk-search button{
+  background:var(--wk-blue);color:#fff;border-radius:999px;
+  font-size:12.5px;padding:5px 13px;font-weight:600;
+}
+.wk-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  font-size:14px;font-weight:600;padding:9px 18px;border-radius:10px;
+  transition:transform .16s,background .2s,color .2s,box-shadow .2s;
+}
+.wk-btn:active{transform:translateY(1px)}
+.wk-btn-primary{background:var(--wk-blue);color:#fff}
+.wk-btn-primary:hover{background:var(--wk-blue-soft)}
+.wk-btn-amber{background:var(--wk-amber);color:#241708}
+.wk-btn-amber:hover{background:#ef9c50}
+.wk-btn-ghost{border:1px solid var(--wk-line);color:var(--wk-blue);background:#fff}
+.wk-btn-ghost:hover{border-color:var(--wk-blue-soft);background:var(--wk-mist)}
+.wk-nav-toggle{display:none;border:1px solid var(--wk-line);border-radius:10px;padding:8px 12px;font-size:13.5px;font-weight:600;color:var(--wk-blue)}
+.wk-search-feedback{
+  font-size:12.5px;color:var(--wk-teal);padding:4px 0 0;display:none;
+}
+.wk-search-feedback.is-on{display:block}
+
+/* ============ 首屏 4:6 大幅图文 ============ */
+.wk-hero{padding:34px 0 8px}
+.wk-hero-grid{
+  display:grid;grid-template-columns:minmax(0,4fr) minmax(0,6fr);
+  gap:34px;align-items:center;
+}
+.wk-hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12.5px;font-weight:700;letter-spacing:.14em;color:var(--wk-teal);
+  background:rgba(47,125,116,.1);
+  padding:5px 12px;border-radius:999px;margin-bottom:16px;
+}
+.wk-hero h1{
+  font-size:clamp(38px,5.4vw,62px);
+  line-height:1.06;letter-spacing:.01em;font-weight:800;
+  color:var(--wk-blue);
+}
+.wk-hero h1 em{
+  font-style:normal;color:var(--wk-amber);
+  position:relative;
+}
+.wk-hero-lead{
+  margin-top:18px;font-size:16.5px;color:#3c505c;max-width:52ch;
+}
+.wk-hero-intro{
+  margin-top:14px;font-size:14px;color:#57707d;
+  border-left:3px solid var(--wk-amber-soft);padding-left:14px;
+}
+.wk-hero-actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:22px}
+.wk-hero-stats{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;margin-top:26px;
+}
+.wk-hero-stat{
+  background:linear-gradient(160deg,#fff,var(--wk-mist));
+  border:1px solid var(--wk-line);border-radius:12px;
+  padding:12px 14px;
+}
+.wk-hero-stat b{display:block;font-size:23px;color:var(--wk-blue);letter-spacing:.01em}
+.wk-hero-stat span{font-size:12px;color:#5d7581}
+.wk-hero-figure{
+  position:relative;border-radius:20px;overflow:hidden;
+  box-shadow:0 24px 46px -30px rgba(28,43,54,.65);
+  border:1px solid var(--wk-line);
+  background:var(--wk-mist);
+}
+.wk-hero-figure img{width:100%;aspect-ratio:16/11;object-fit:cover}
+.wk-hero-badge{
+  position:absolute;left:16px;bottom:16px;
+  background:rgba(28,43,54,.86);color:#f4f8fa;
+  backdrop-filter:blur(3px);
+  padding:9px 14px;border-radius:11px;font-size:13px;line-height:1.5;
+  max-width:78%;
+}
+.wk-hero-badge b{color:var(--wk-amber-soft)}
+
+/* ============ 通用板块标题 ============ */
+.wk-section{padding:52px 0}
+.wk-section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:22px;margin-bottom:26px;flex-wrap:wrap}
+.wk-section-head h2{
+  font-size:clamp(23px,2.7vw,31px);line-height:1.25;color:var(--wk-blue);font-weight:800;
+  letter-spacing:.01em;
+}
+.wk-section-head h2 small{
+  display:block;font-size:12.5px;font-weight:600;letter-spacing:.18em;color:var(--wk-teal);
+  margin-bottom:7px;
+}
+.wk-section-desc{font-size:13.5px;color:#5d7581;max-width:46ch}
+
+/* ============ 焦点内容 一幅重点大图 + 文字列表 ============ */
+.wk-spotlight{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:26px}
+.wk-feature-card{
+  border-radius:18px;overflow:hidden;border:1px solid var(--wk-line);
+  background:#fff;box-shadow:0 16px 34px -28px rgba(28,43,54,.55);
+  display:flex;flex-direction:column;
+}
+.wk-feature-card img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.wk-feature-body{padding:20px 22px 22px}
+.wk-chip-row{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:11px}
+.wk-chip{
+  font-size:11.5px;padding:3px 10px;border-radius:999px;
+  background:var(--wk-mist);color:var(--wk-blue-soft);font-weight:600;
+}
+.wk-chip.is-amber{background:var(--wk-amber-soft);color:#7a4b12}
+.wk-feature-body h3{font-size:21px;line-height:1.4;color:var(--wk-blue);margin-bottom:9px}
+.wk-feature-body p{font-size:14px;color:#4c626e}
+.wk-meta{display:flex;flex-wrap:wrap;gap:14px;font-size:12.5px;color:#6c8492;margin-top:13px}
+.wk-act-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.wk-act{
+  font-size:12.5px;padding:6px 13px;border-radius:999px;
+  border:1px solid var(--wk-line);background:#fff;color:#3c5461;
+  display:inline-flex;align-items:center;gap:6px;
+  transition:background .18s,border-color .18s,color .18s;
+}
+.wk-act:hover{border-color:var(--wk-blue-soft);color:var(--wk-blue)}
+.wk-act.is-liked{background:rgba(224,138,60,.14);border-color:var(--wk-amber);color:#8a4d10}
+.wk-act.is-saved{background:rgba(47,125,116,.12);border-color:var(--wk-teal);color:#215b55}
+.wk-textlist{display:flex;flex-direction:column;gap:2px;background:#fff;border:1px solid var(--wk-line);border-radius:18px;padding:6px 4px}
+.wk-textlist-item{
+  display:grid;grid-template-columns:34px minmax(0,1fr);gap:12px;
+  padding:14px 16px;border-radius:13px;transition:background .18s;
+}
+.wk-textlist-item:hover{background:var(--wk-mist)}
+.wk-textlist-idx{
+  font-size:13px;font-weight:800;color:var(--wk-amber);
+  font-variant-numeric:tabular-nums;padding-top:3px;
+}
+.wk-textlist-item h3{font-size:15.5px;line-height:1.45;color:var(--wk-blue)}
+.wk-textlist-item p{font-size:13px;color:#5d7581;margin-top:4px}
+.wk-textlist-meta{font-size:12px;color:#7d939f;margin-top:6px;display:flex;flex-wrap:wrap;gap:10px}
+
+/* ============ 视频流：三列等高卡片 ============ */
+.wk-video-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.wk-video-card{
+  background:#fff;border:1px solid var(--wk-line);border-radius:16px;overflow:hidden;
+  display:flex;flex-direction:column;
+  transition:transform .2s,box-shadow .2s,border-color .2s;
+}
+.wk-video-card:hover{transform:translateY(-4px);box-shadow:0 20px 36px -30px rgba(28,43,54,.6);border-color:#bccdd6}
+.wk-video-thumb{position:relative;background:var(--wk-mist)}
+.wk-video-thumb img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.wk-play-dot{
+  position:absolute;right:11px;bottom:11px;
+  width:34px;height:34px;border-radius:50%;
+  background:rgba(28,43,54,.82);color:#fff;
+  display:grid;place-items:center;font-size:12px;
+}
+.wk-video-body{padding:15px 16px 17px;display:flex;flex-direction:column;flex:1}
+.wk-video-body h3{font-size:15.5px;line-height:1.45;color:var(--wk-blue);margin-bottom:7px}
+.wk-video-body p{font-size:13px;color:#5d7581;flex:1}
+.wk-video-foot{
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  margin-top:13px;padding-top:11px;border-top:1px dashed var(--wk-line);
+  font-size:12px;color:#718995;
+}
+.wk-video-author{display:flex;align-items:center;gap:7px;font-weight:600;color:#3c5461}
+.wk-mini-avatar{
+  width:22px;height:22px;border-radius:50%;flex:none;
+  display:grid;place-items:center;font-size:10.5px;font-weight:800;color:#fff;
+}
+
+/* ============ 专题 / 企划 ============ */
+.wk-topic-band{background:linear-gradient(180deg,var(--wk-mist),var(--wk-paper));border-block:1px solid var(--wk-line)}
+.wk-topic-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.wk-topic-card{
+  background:#fff;border:1px solid var(--wk-line);border-radius:16px;padding:20px 21px;
+  display:flex;flex-direction:column;gap:12px;
+}
+.wk-topic-card.is-wide{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:22px;align-items:center}
+.wk-topic-card img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:12px}
+.wk-topic-headline{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.wk-topic-headline h3{font-size:18px;color:var(--wk-blue);line-height:1.4}
+.wk-status{
+  font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:999px;
+  background:rgba(47,125,116,.12);color:#215b55;white-space:nowrap;
+}
+.wk-status.is-live{background:rgba(224,138,60,.16);color:#8a4d10}
+.wk-topic-desc{font-size:13.5px;color:#556c78}
+.wk-topic-list li{
+  font-size:13px;color:#43596a;padding:7px 0 7px 16px;position:relative;
+  border-top:1px dashed var(--wk-line);
+}
+.wk-topic-list li::before{
+  content:"";position:absolute;left:0;top:15px;
+  width:6px;height:6px;border-radius:2px;background:var(--wk-amber);
+}
+
+/* ============ 关键词深度解析 ============ */
+.wk-analysis{border-top:1px solid var(--wk-line)}
+.wk-analysis-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:34px;align-items:start}
+.wk-analysis-fig{border-radius:16px;overflow:hidden;border:1px solid var(--wk-line);background:#fff}
+.wk-analysis-fig img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.wk-analysis-fig figcaption{font-size:12.5px;color:#6c8492;padding:11px 14px;line-height:1.6}
+.wk-analysis-article h3{
+  font-size:18px;color:var(--wk-blue);margin:22px 0 9px;line-height:1.45;
+  padding-left:13px;border-left:4px solid var(--wk-amber-soft);
+}
+.wk-analysis-article h3:first-child{margin-top:0}
+.wk-analysis-article p{font-size:14px;color:#425865;margin-bottom:11px}
+.wk-analysis-article strong{color:var(--wk-blue);font-weight:700}
+.wk-analysis-callout{
+  margin-top:20px;background:var(--wk-mist);border-radius:13px;padding:16px 18px;
+  font-size:13.5px;color:#3c5461;border-left:4px solid var(--wk-teal);
+}
+
+/* ============ 创作者：双列简介 ============ */
+.wk-creator-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.wk-creator-card{
+  display:grid;grid-template-columns:56px minmax(0,1fr);gap:15px;
+  background:#fff;border:1px solid var(--wk-line);border-radius:16px;padding:18px;
+  transition:box-shadow .2s,border-color .2s;
+}
+.wk-creator-card:hover{border-color:#bfd0d9;box-shadow:0 16px 30px -28px rgba(28,43,54,.55)}
+.wk-avatar-lg{
+  width:56px;height:56px;border-radius:16px;flex:none;
+  display:grid;place-items:center;font-size:21px;font-weight:800;color:#fff;
+  letter-spacing:.02em;
+}
+.wk-creator-card h3{font-size:16.5px;color:var(--wk-blue);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.wk-creator-field{font-size:12px;font-weight:600;color:var(--wk-teal);background:rgba(47,125,116,.1);padding:2px 9px;border-radius:999px}
+.wk-creator-card p{font-size:13px;color:#556c78;margin-top:7px}
+.wk-creator-nums{display:flex;flex-wrap:wrap;gap:14px;font-size:12px;color:#718995;margin-top:10px}
+.wk-creator-nums b{color:var(--wk-blue);font-variant-numeric:tabular-nums}
+
+/* ============ 口碑/评论：短评列表 + 评分摘要 ============ */
+.wk-review-wrap{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:26px;align-items:start}
+.wk-score-panel{
+  background:var(--wk-blue);color:#f2f7f9;border-radius:18px;padding:24px 22px;
+  position:sticky;top:var(--wk-sticky);
+}
+.wk-score-panel b{font-size:46px;line-height:1;display:block;letter-spacing:-.01em}
+.wk-score-stars{color:var(--wk-amber-soft);font-size:16px;letter-spacing:3px;margin:8px 0 4px}
+.wk-score-panel p{font-size:12.5px;color:#b9cbd5}
+.wk-score-bars{margin-top:18px;display:flex;flex-direction:column;gap:8px}
+.wk-score-bar{display:grid;grid-template-columns:34px minmax(0,1fr) 34px;gap:9px;align-items:center;font-size:11.5px;color:#c7d7df}
+.wk-score-bar i{display:block;height:6px;border-radius:99px;background:rgba(255,255,255,.18);overflow:hidden}
+.wk-score-bar i span{display:block;height:100%;background:var(--wk-amber);border-radius:99px}
+.wk-review-list{display:flex;flex-direction:column;gap:14px}
+.wk-review-item{
+  background:#fff;border:1px solid var(--wk-line);border-radius:14px;padding:16px 18px;
+}
+.wk-review-top{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.wk-review-top b{font-size:13.5px;color:var(--wk-blue)}
+.wk-review-top time{font-size:11.5px;color:#8ba0aa;margin-left:auto}
+.wk-review-item p{font-size:13.5px;color:#425865}
+.wk-review-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.wk-review-tags span{font-size:11px;color:#6c8492;background:var(--wk-mist);padding:2px 8px;border-radius:99px}
+
+/* ============ 品牌动态 + FAQ 双栏 ============ */
+.wk-info-wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:26px;align-items:start}
+.wk-news-list{display:flex;flex-direction:column;gap:0;background:#fff;border:1px solid var(--wk-line);border-radius:16px;overflow:hidden}
+.wk-news-item{padding:16px 19px;border-bottom:1px solid var(--wk-line)}
+.wk-news-item:last-child{border-bottom:none}
+.wk-news-item time{font-size:11.5px;font-weight:700;color:var(--wk-amber);letter-spacing:.06em}
+.wk-news-item h3{font-size:15px;color:var(--wk-blue);margin:5px 0 4px;line-height:1.45}
+.wk-news-item p{font-size:13px;color:#5d7581}
+.wk-faq-card{background:#fff;border:1px solid var(--wk-line);border-radius:16px;padding:8px 19px}
+.wk-faq-card details{border-bottom:1px dashed var(--wk-line);padding:13px 0}
+.wk-faq-card details:last-child{border-bottom:none}
+.wk-faq-card summary{
+  font-size:14.5px;font-weight:600;color:var(--wk-blue);cursor:pointer;
+  list-style:none;position:relative;padding-right:24px;
+}
+.wk-faq-card summary::-webkit-details-marker{display:none}
+.wk-faq-card summary::after{
+  content:"+";position:absolute;right:2px;top:-2px;font-size:19px;color:var(--wk-amber);
+  font-weight:700;transition:transform .2s;
+}
+.wk-faq-card details[open] summary::after{content:"−"}
+.wk-faq-card details p{font-size:13px;color:#556c78;margin-top:9px}
+
+/* ============ 伙伴墙 ============ */
+.wk-partner-band{background:var(--wk-mist);border-block:1px solid var(--wk-line)}
+.wk-partner-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.wk-partner{
+  background:#fff;border:1px solid var(--wk-line);border-radius:13px;
+  padding:16px 14px;text-align:center;
+}
+.wk-partner b{display:block;font-size:14px;color:var(--wk-blue);letter-spacing:.02em}
+.wk-partner span{display:block;font-size:11.5px;color:#718995;margin-top:4px}
+
+/* ============ 页脚 ============ */
+.wk-footer{background:var(--wk-blue);color:#c3d3dc;padding:46px 0 26px;margin-top:0}
+.wk-footer-grid{display:grid;grid-template-columns:minmax(0,5fr) repeat(3,minmax(0,2.4fr));gap:30px}
+.wk-footer-brand b{font-size:18px;color:#fff;letter-spacing:.03em}
+.wk-footer-brand p{font-size:13px;margin-top:10px;max-width:38ch;line-height:1.8}
+.wk-footer-brand .wk-footer-slogan{color:var(--wk-amber-soft);font-weight:600;margin-top:12px;font-size:12.5px;letter-spacing:.14em}
+.wk-footer-col h3{font-size:13.5px;color:#fff;margin-bottom:12px;letter-spacing:.06em}
+.wk-footer-col a,.wk-footer-col span{display:block;font-size:12.5px;padding:4px 0;color:#b3c6d0}
+.wk-footer-col a:hover{color:#fff}
+.wk-footer-bottom{
+  margin-top:32px;padding-top:18px;border-top:1px solid rgba(255,255,255,.14);
+  display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;
+  font-size:12px;color:#9db3bf;
+}
+
+/* ============ Toast / 回到顶部 ============ */
+.wk-toast{
+  position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);
+  background:rgba(28,43,54,.95);color:#fff;font-size:13.5px;
+  padding:11px 20px;border-radius:11px;z-index:200;
+  opacity:0;pointer-events:none;transition:opacity .22s,transform .22s;
+  max-width:80vw;text-align:center;
+}
+.wk-toast.is-on{opacity:1;transform:translate(-50%,0)}
+.wk-top-btn{
+  position:fixed;right:22px;bottom:26px;z-index:120;
+  width:44px;height:44px;border-radius:50%;
+  background:var(--wk-blue);color:#fff;font-size:17px;
+  display:grid;place-items:center;box-shadow:0 12px 24px -14px rgba(28,43,54,.8);
+  opacity:0;pointer-events:none;transition:opacity .22s,transform .22s;
+}
+.wk-top-btn.is-on{opacity:1;pointer-events:auto}
+.wk-top-btn:hover{transform:translateY(-3px)}
+
+/* ============ 响应式 ============ */
+@media (max-width:1020px){
+  .wk-hero-grid{grid-template-columns:1fr}
+  .wk-spotlight{grid-template-columns:1fr}
+  .wk-video-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .wk-analysis-grid{grid-template-columns:1fr}
+  .wk-review-wrap{grid-template-columns:1fr}
+  .wk-score-panel{position:static}
+  .wk-info-wrap{grid-template-columns:1fr}
+  .wk-footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .wk-partner-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:780px){
+  :root{--wk-sticky:96px}
+  .wk-nav-toggle{display:inline-flex}
+  .wk-header-inner{flex-wrap:wrap;gap:12px;padding:12px 0}
+  .wk-nav{
+    order:5;flex-basis:100%;display:none;flex-direction:column;gap:2px;
+    padding-top:10px;border-top:1px solid var(--wk-line);
+  }
+  .wk-nav.is-open{display:flex}
+  .wk-nav a{padding:10px 12px}
+  .wk-header-tools{order:4;flex:1;justify-content:flex-end}
+  .wk-search input{width:108px}
+  .wk-hero h1{font-size:clamp(34px,9vw,46px)}
+  .wk-creator-grid{grid-template-columns:1fr}
+  .wk-topic-grid{grid-template-columns:1fr}
+  .wk-topic-card.is-wide{grid-template-columns:1fr}
+  .wk-video-grid{grid-template-columns:1fr}
+  .wk-hero-stats{grid-template-columns:1fr 1fr}
+  .wk-notice-more{display:none}
+  .wk-footer-grid{grid-template-columns:1fr}
+}
+@media (max-width:480px){
+  .wk-partner-grid{grid-template-columns:1fr}
+  .wk-hero-stats{grid-template-columns:1fr}
+  .wk-search{display:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- ===== S1 公告条 + 页头（吸顶） ===== -->
+<div class="wk-sticky-stack">
+  <div class="wk-notice-bar" role="region" aria-label="官方公告">
+    <div class="wk-wrapper wk-notice-inner">
+      <span class="wk-notice-tag">官方发布</span>
+      <div class="wk-notice-scroll" aria-live="polite">
+        <ul class="wk-notice-track">
+          <li><b>11/22</b> 冬季纯棉系列《一针一线的温度》4K 高清正片上线，社区同步开放报名</li>
+          <li><b>11/19</b> 「白棉袜vk 创作挑战赛」第三季启动，报名通道已开启，投稿最高可获年度曝光位</li>
+          <li><b>11/15</b> 创作者成长计划新增 12 位签约作者，企业动态与内容生态月报同步更新</li>
+          <li><b>11/08</b> 官方攻略手册《棉袜穿搭 30 讲》上线，支持高清下载与离线收藏</li>
+        </ul>
+      </div>
+      <a class="wk-notice-more" href="#wk-news">查看全部更新</a>
+    </div>
+  </div>
+
+  <header class="wk-header">
+    <div class="wk-wrapper wk-header-inner">
+      <a class="wk-brand" href="#wk-top" aria-label="白棉袜vk 官方首页">
+        <span class="wk-brand-mark" aria-hidden="true">袜</span>
+        <span class="wk-brand-text">
+          <b>白棉袜vk</b>
+          <span>官方视频门户</span>
+        </span>
+      </a>
+      <nav class="wk-nav" id="wk-nav" aria-label="主导航">
+        <a href="#wk-spotlight">焦点内容</a>
+        <a href="#wk-videos">视频社区</a>
+        <a href="#wk-topics">专题企划</a>
+        <a href="#wk-analysis">品牌解析</a>
+        <a href="#wk-creators">创作者</a>
+        <a href="#wk-reviews">口碑</a>
+        <a href="#wk-news">企业动态</a>
+      </nav>
+      <div class="wk-header-tools">
+        <form class="wk-search" id="wk-search-form" role="search">
+          <label class="wk-sr-only" for="wk-search-input">站内搜索</label>
+          <input type="search" id="wk-search-input" placeholder="搜索视频、专题、作者" autocomplete="off">
+          <button type="submit">搜索</button>
+        </form>
+        <button class="wk-btn wk-btn-amber" id="wk-submit-open" type="button">投稿入口</button>
+        <button class="wk-nav-toggle" id="wk-nav-toggle" type="button" aria-expanded="false" aria-controls="wk-nav">菜单</button>
+      </div>
+    </div>
+    <div class="wk-wrapper">
+      <p class="wk-search-feedback" id="wk-search-feedback" role="status"></p>
+    </div>
+  </header>
+</div>
+
+<main id="wk-top">
+
+  <!-- ===== S2 品牌首屏 4:6 ===== -->
+  <section class="wk-hero" aria-labelledby="wk-hero-title">
+    <div class="wk-wrapper wk-hero-grid">
+      <div class="wk-hero-copy">
+        <span class="wk-hero-eyebrow">官方网站 · 纯棉生活方式影像平台</span>
+        <h1 id="wk-hero-title">白棉袜<em>vk</em></h1>
+        <p class="wk-hero-lead">从一个关于「袜子」的朴素问题出发，我们把镜头交给穿袜子的人：通勤、跑步、露营、熬夜改稿、带娃、搬家。白棉袜vk 是这一系列真实生活的官方视频门户。</p>
+        <p class="wk-hero-intro">作为深耕纯棉袜品与舒适穿着领域的品牌，白棉袜vk 官方网站致力于为创作者与用户搭建高品质内容生态：以原创、正版、高清的视频记录日常，让每一双白棉袜都有可追溯的温度与被讲述的资格。</p>
+        <div class="wk-hero-actions">
+          <a class="wk-btn wk-btn-primary" href="#wk-videos">进入视频社区</a>
+          <a class="wk-btn wk-btn-ghost" href="#wk-topics">浏览专题企划</a>
+          <button class="wk-btn wk-btn-ghost" type="button" id="wk-share-hero">分享官方首页</button>
+        </div>
+        <div class="wk-hero-stats">
+          <div class="wk-hero-stat"><b>1,286</b><span>原创高清视频</span></div>
+          <div class="wk-hero-stat"><b>48.6万</b><span>社区注册创作者与用户</span></div>
+          <div class="wk-hero-stat"><b>96.4%</b><span>用户口碑好评率</span></div>
+        </div>
+      </div>
+      <figure class="wk-hero-figure">
+        <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 880 605'%3E%3Cdefs%3E%3ClinearGradient id='sky' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23dfeaf0'/%3E%3Cstop offset='1' stop-color='%23f6ece0'/%3E%3C/linearGradient%3E%3ClinearGradient id='sock' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23ffffff'/%3E%3Cstop offset='1' stop-color='%23d9e5ea'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='880' height='605' fill='url(%23sky)'/%3E%3Ccircle cx='700' cy='128' r='112' fill='%23f0b87a' opacity='0.32'/%3E%3Crect x='0' y='452' width='880' height='153' fill='%23223c4e' opacity='0.1'/%3E%3Cg%3E%3Crect x='120' y='150' width='150' height='300' rx='16' fill='%23ffffff' opacity='0.5'/%3E%3Crect x='300' y='96' width='196' height='354' rx='18' fill='%23ffffff' opacity='0.75'/%3E%3Crect x='530' y='176' width='152' height='274' rx='16' fill='%23ffffff' opacity='0.55'/%3E%3C/g%3E%3Cg transform='translate(300 96)'%3E%3Cpath d='M34 30h64v150c0 46 30 72 78 72s78-26 78-72V30h64v152c0 82-58 132-142 132S34 264 34 182z' fill='url(%23sock)' stroke='%23aebfc9' stroke-width='3'/%3E%3Cpath d='M34 84h64M162 84h64' stroke='%23e08a3c' stroke-width='8' stroke-linecap='round'/%3E%3C/g%3E%3Cg fill='none' stroke='%23223c4e' stroke-width='2' opacity='0.35'%3E%3Cpath d='M80 520c120-40 240-40 360 0s240 40 360 0'/%3E%3Cpath d='M80 556c120-40 240-40 360 0s240 40 360 0'/%3E%3C/g%3E%3Ctext x='64' y='70' font-family='PingFang SC,sans-serif' font-size='26' font-weight='700' fill='%23223c4e'%3E纯棉 · 日常 · 影像%3C/text%3E%3C/svg%3E" alt="白棉袜vk 官方首页主视觉：浅蓝背景中三块白色陈列板与一只大幅纯棉袜插画" width="880" height="605">
+        <figcaption class="wk-hero-badge"><b>本周官方精选</b><br>《一针一线的温度》：跟拍 14 天的袜子生产线与穿它的人</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== S3 焦点内容：一幅重点大图 + 文字列表 ===== -->
+  <section class="wk-section" id="wk-spotlight" aria-labelledby="wk-spotlight-title">
+    <div class="wk-wrapper">
+      <div class="wk-section-head">
+        <h2 id="wk-spotlight-title"><small>焦点内容</small>本周官方重点推荐 · 值得信赖的精品内容</h2>
+        <p class="wk-section-desc">由白棉袜vk 官方编辑团队与社区创作者共同选出，覆盖品牌故事、深度测评与日常记录三类题材。</p>
+      </div>
+      <div class="wk-spotlight">
+        <article class="wk-feature-card">
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 960 540'%3E%3Crect width='960' height='540' fill='%23f4f7f8'/%3E%3Crect x='0' y='360' width='960' height='180' fill='%23dfe9ee'/%3E%3Cg stroke='%23223c4e' stroke-width='3' fill='none'%3E%3Crect x='70' y='90' width='240' height='150' rx='12' fill='%23ffffff'/%3E%3Crect x='360' y='60' width='240' height='180' rx='12' fill='%23ffffff'/%3E%3Crect x='650' y='100' width='240' height='140' rx='12' fill='%23ffffff'/%3E%3C/g%3E%3Cg fill='%23e08a3c'%3E%3Ccircle cx='190' cy='165' r='26'/%3E%3Ccircle cx='480' cy='150' r='34'/%3E%3Ccircle cx='770' cy='170' r='24'/%3E%3C/g%3E%3Cg stroke='%232f7d74' stroke-width='10' stroke-linecap='round'%3E%3Cpath d='M120 300h170M420 290h190M700 300h150'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M420 220v90c0 34 22 52 56 52s56-18 56-52v-90' fill='%23ffffff' stroke='%23aebfc9' stroke-width='4'/%3E%3Cpath d='M420 252h32M500 252h32' stroke='%23e08a3c' stroke-width='7' stroke-linecap='round'/%3E%3C/g%3E%3Ctext x='70' y='500' font-family='PingFang SC,sans-serif' font-size='24' font-weight='700' fill='%23223c4e'%3E生产线 · 穿着者 · 十四天%3C/text%3E%3C/svg%3E" alt="焦点视频封面：白色展示板上排列的纯棉袜样品与生产线记录画面" width="960" height="540">
+          <div class="wk-feature-body">
+            <div class="wk-chip-row">
+              <span class="wk-chip is-amber">官方首发</span>
+              <span class="wk-chip">品牌故事</span>
+              <span class="wk-chip">4K 高清</span>
+              <span class="wk-chip">创作幕后</span>
+            </div>
+            <h3>《一针一线的温度》：一条棉袜生产线的第 14 天</h3>
+            <p>我们从清棉车间拍到成品折叠台，记录一支白棉袜从纱线到装箱的完整路径，并跟拍了三位质检员、一位夜班机修工和一位每天穿它上班的公交司机。镜头不回避枯燥，因为真实本身就足够动人。</p>
+            <div class="wk-meta">
+              <span>作者：白棉袜vk 官方编辑部</span>
+              <span>时长 24:18</span>
+              <span>播放 21.8万</span>
+              <span>收藏 6,428</span>
+            </div>
+            <div class="wk-act-row">
+              <button class="wk-act wk-like" type="button" data-count="4820"><span aria-hidden="true">♡</span> 点赞 <b class="wk-like-count">4820</b></button>
+              <button class="wk-act wk-save" type="button"><span aria-hidden="true">☆</span> 收藏</button>
+              <button class="wk-act wk-copy" type="button" data-title="一针一线的温度">复制链接</button>
+              <button class="wk-act wk-report" type="button">反馈</button>
+            </div>
+          </div>
+        </article>
+        <ol class="wk-textlist">
+          <li class="wk-textlist-item">
+            <span class="wk-textlist-idx">01</span>
+            <div>
+              <h3>通勤 90 分钟：穿白棉袜上班的 12 种方式</h3>
+              <p>不拍鞋，只拍脚踝。我们用一天的通勤路线，验证白棉袜在西装、工装、运动裤下的适配度。</p>
+              <div class="wk-textlist-meta"><span>作者：棉线阿鹤</span><span>播放 13.2万</span><span>赞 3,102</span></div>
+            </div>
+          </li>
+          <li class="wk-textlist-item">
+            <span class="wk-textlist-idx">02</span>
+            <div>
+              <h3>纯棉袜深度测评：洗 30 次之后还剩多少克重</h3>
+              <p>我们做了 30 次机洗对照实验，记录缩水率、起球等级与回弹曲线，给出可复现的判断标准。</p>
+              <div class="wk-textlist-meta"><span>作者：实验室老周</span><span>播放 9.8万</span><span>赞 2,764</span></div>
+            </div>
+          </li>
+          <li class="wk-textlist-item">
+            <span class="wk-textlist-idx">03</span>
+            <div>
+              <h3>与三位创作者聊「脚感」：一个被忽略的舒适指标</h3>
+              <p>访谈摘录式短片，谈袜子如何影响一整天的专注度，以及他们为什么愿意重复买同款。</p>
+              <div class="wk-textlist-meta"><span>作者：栏目组小满</span><span>播放 7.6万</span><span>赞 1,948</span></div>
+            </div>
+          </li>
+          <li class="wk-textlist-item">
+            <span class="wk-textlist-idx">04</span>
+            <div>
+              <h3>凌晨四点的物流仓：打包一双袜子的 37 秒</h3>
+              <p>一个人、一张面单、一台封口机。这条短片只讲流程，却拍出了持续运营背后的日常节奏。</p>
+              <div class="wk-textlist-meta"><span>作者：白棉袜vk 纪录组</span><span>播放 6.1万</span><span>赞 1,530</span></div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 视频社区：三列等高卡片 ===== -->
+  <section class="wk-section" id="wk-videos" aria-labelledby="wk-videos-title" style="background:var(--wk-mist);border-block:1px solid var(--wk-line)">
+    <div class="wk-wrapper">
+      <div class="wk-section-head">
+        <h2 id="wk-videos-title"><small>视频社区</small>白棉袜vk 热门视频：来自创作者的真实记录</h2>
+        <p class="wk-section-desc">六大题材全部为社区投稿与官方共创，支持高清播放与收藏，榜单依据播放、点赞与完播率综合计算。</p>
+      </div>
+      <div class="wk-video-grid">
+
+        <article class="wk-video-card">
+          <div class="wk-video-thumb">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23eaf1f4'/%3E%3Cg fill='%23ffffff' stroke='%23b6c9d3' stroke-width='2'%3E%3Crect x='60' y='150' width='120' height='120' rx='10'/%3E%3Crect x='200' y='120' width='120' height='150' rx='10'/%3E%3Crect x='340' y='165' width='120' height='105' rx='10'/%3E%3Crect x='480' y='135' width='110' height='135' rx='10'/%3E%3C/g%3E%3Cg fill='%23e08a3c'%3E%3Crect x='78' y='196' width='84' height='12' rx='6'/%3E%3Crect x='218' y='168' width='84' height='12' rx='6'/%3E%3Crect x='358' y='212' width='84' height='12' rx='6'/%3E%3Crect x='498' y='182' width='74' height='12' rx='6'/%3E%3C/g%3E%3Cpath d='M0 300h640v60H0z' fill='%23d6e3e9'/%3E%3Ctext x='60' y='70' font-family='PingFang SC,sans-serif' font-size='22' font-weight='700' fill='%23223c4e'%3E收纳格实验%3C/text%3E%3C/svg%3E" alt="视频封面：四个白色收纳格中整齐叠放的白棉袜" width="640" height="360">
+            <span class="wk-play-dot" aria-hidden="true">▶</span>
+          </div>
+          <div class="wk-video-body">
+            <div class="wk-chip-row"><span class="wk-chip">家居收纳</span><span class="wk-chip">实用技巧</span></div>
+            <h3>抽屉里的秩序：白棉袜 6 种折法与换季收纳</h3>
+            <p>从立式折叠到卷筒收纳，实测四种抽屉格子的空间利用率，并给出适合小户型的换季方案。</p>
+            <div class="wk-video-foot">
+              <span class="wk-video-author"><span class="wk-mini-avatar" style="background:#2f7d74">收</span>收纳师林屿</span>
+              <span>播放 8.4万</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="wk-video-card">
+          <div class="wk-video-thumb">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23223c4e'/%3E%3Cg stroke='%23f0b87a' stroke-width='2' opacity='0.6'%3E%3Cpath d='M40 300c80-70 160-70 240 0s160 70 240 0 120-30 160 0' fill='none'/%3E%3Cpath d='M40 250c80-70 160-70 240 0s160 70 240 0 120-30 160 0' fill='none'/%3E%3C/g%3E%3Cg fill='%23ffffff'%3E%3Ccircle cx='320' cy='118' r='46' opacity='0.9'/%3E%3C/g%3E%3Cpath d='M292 96h14v44c0 14 9 21 21 21s21-7 21-21V96h14v46c0 24-15 37-35 37s-35-13-35-37z' fill='%23223c4e'/%3E%3Ctext x='40' y='78' font-family='PingFang SC,sans-serif' font-size='22' font-weight='700' fill='%23f6d9bd'%3E夜跑实测%3C/text%3E%3C/svg%3E" alt="视频封面：深蓝夜色背景与白色圆形标识中的袜子轮廓" width="640" height="360">
+            <span class="wk-play-dot" aria-hidden="true">▶</span>
+          </div>
+          <div class="wk-video-body">
+            <div class="wk-chip-row"><span class="wk-chip">健康运动</span><span class="wk-chip">深度测评</span></div>
+            <h3>夜跑 10 公里：三种厚度纯棉袜的脚感对照</h3>
+            <p>同一路线、同一双鞋、三位跑者，记录磨脚点、吸汗速度与赛后恢复感受，附可复现测试表。</p>
+            <div class="wk-video-foot">
+              <span class="wk-video-author"><span class="wk-mini-avatar" style="background:#e08a3c">跑</span>跑者陈七</span>
+              <span>播放 11.6万</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="wk-video-card">
+          <div class="wk-video-thumb">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23f6ece0'/%3E%3Cg stroke='%23a9bcc6' stroke-width='2' fill='%23ffffff'%3E%3Crect x='90' y='80' width='200' height='200' rx='14'/%3E%3Crect x='340' y='120' width='200' height='160' rx='14'/%3E%3C/g%3E%3Cg stroke='%232f7d74' stroke-width='3' fill='none'%3E%3Ccircle cx='190' cy='180' r='52'/%3E%3Cpath d='M190 140v40l30 20'/%3E%3C/g%3E%3Cg fill='%23e08a3c'%3E%3Ccircle cx='430' cy='190' r='16'/%3E%3Ccircle cx='480' cy='190' r='16'/%3E%3Ccircle cx='430' cy='236' r='16'/%3E%3C/g%3E%3Ctext x='90' y='320' font-family='PingFang SC,sans-serif' font-size='22' font-weight='700' fill='%23223c4e'%3E工位上的 8 小时%3C/text%3E%3C/svg%3E" alt="视频封面：米白背景上的时钟与三步动作示意图" width="640" height="360">
+            <span class="wk-play-dot" aria-hidden="true">▶</span>
+          </div>
+          <div class="wk-video-body">
+            <div class="wk-chip-row"><span class="wk-chip">职场日常</span><span class="wk-chip">经验分享</span></div>
+            <h3>久坐 8 小时之后：3 个被忽略的脚部放松动作</h3>
+            <p>不需要器械，工位即可完成。我们请物理治疗师拆解动作要点，并说明为什么袜子材质会影响舒适度。</p>
+            <div class="wk-video-foot">
+              <span class="wk-video-author"><span class="wk-mini-avatar" style="background:#3f6076">动</span>阿May聊身体</span>
+              <span>播放 6.9万</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="wk-video-card">
+          <div class="wk-video-thumb">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23dfeae6'/%3E%3Cg fill='%23ffffff' stroke='%23a9c4bd' stroke-width='2'%3E%3Crect x='70' y='120' width='500' height='120' rx='16'/%3E%3C/g%3E%3Cg stroke='%232f7d74' stroke-width='4'%3E%3Cpath d='M120 150v60M200 150v60M280 150v60M360 150v60M440 150v60M520 150v60' opacity='0.45'/%3E%3C/g%3E%3Cg fill='%23e08a3c'%3E%3Crect x='150' y='80' width='70' height='40' rx='8'/%3E%3Crect x='300' y='80' width='70' height='40' rx='8'/%3E%3Crect x='450' y='80' width='70' height='40' rx='8'/%3E%3C/g%3E%3Ctext x='70' y='310' font-family='PingFang SC,sans-serif' font-size='22' font-weight='700' fill='%23223c4e'%3E手作的一天%3C/text%3E%3C/svg%3E" alt="视频封面：浅绿背景上的白色长条工作台与橙色小方块工具" width="640" height="360">
+            <span class="wk-play-dot" aria-hidden="true">▶</span>
+          </div>
+          <div class="wk-video-body">
+            <div class="wk-chip-row"><span class="wk-chip">手作DIY</span><span class="wk-chip">创作幕后</span></div>
+            <h3>把旧棉袜改成收纳袋：一个人 90 分钟的手作</h3>
+            <p>不用缝纫机，四针完成。过程不剪接，包括两次失败与一次返工，最适合周末下午跟做。</p>
+            <div class="wk-video-foot">
+              <span class="wk-video-author"><span class="wk-mini-avatar" style="background:#2f7d74">手</span>布头阿澄</span>
+              <span>播放 5.7万</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="wk-video-card">
+          <div class="wk-video-thumb">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%232b3d4a'/%3E%3Cg fill='%23ffffff' opacity='0.85'%3E%3Crect x='80' y='90' width='4' height='180'/%3E%3Crect x='320' y='70' width='4' height='220'/%3E%3Crect x='540' y='100' width='4' height='170'/%3E%3C/g%3E%3Cg stroke='%23f0b87a' stroke-width='3' fill='none'%3E%3Cpath d='M84 200c80 0 80-60 152-60s72 60 152 60 72-40 152-40'/%3E%3C/g%3E%3Cg fill='%23e08a3c'%3E%3Ccircle cx='84' cy='200' r='9'/%3E%3Ccircle cx='236' cy='140' r='9'/%3E%3Ccircle cx='388' cy='200' r='9'/%3E%3Ccircle cx='540' cy='160' r='9'/%3E%3C/g%3E%3Ctext x='80' y='320' font-family='PingFang SC,sans-serif' font-size='22' font-weight='700' fill='%23f6d9bd'%3E数据曲线%3C/text%3E%3C/svg%3E" alt="视频封面：深色背景上带数据节点与曲线的分析图表" width="640" height="360">
+            <span class="wk-play-dot" aria-hidden="true">▶</span>
+          </div>
+          <div class="wk-video-body">
+            <div class="wk-chip-row"><span class="wk-chip">行业观察</span><span class="wk-chip">知识科普</span></div>
+            <h3>棉价波动之后：一双袜子成本结构到底怎么算</h3>
+            <p>从纱线、织造、染整到物流，用公开数据拆解一双纯棉袜的成本区间，并解释价格差异从哪来。</p>
+            <div class="wk-video-foot">
+              <span class="wk-video-author"><span class="wk-mini-avatar" style="background:#3f6076">析</span>行业观察员苏禾</span>
+              <span>播放 4.8万</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="wk-video-card">
+          <div class="wk-video-thumb">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23f3eef6'/%3E%3Cg fill='%23ffffff' stroke='%23c8b9d4' stroke-width='2'%3E%3Ccircle cx='200' cy='150' r='56'/%3E%3Ccircle cx='320' cy='190' r='40'/%3E%3Ccircle cx='430' cy='140' r='48'/%3E%3C/g%3E%3Cg fill='%23977fb0' opacity='0.7'%3E%3Ccircle cx='200' cy='150' r='20'/%3E%3Ccircle cx='320' cy='190' r='14'/%3E%3Ccircle cx='430' cy='140' r='17'/%3E%3C/g%3E%3Cpath d='M0 286h640v74H0z' fill='%23e3d9ec'/%3E%3Ctext x='60' y='70' font-family='PingFang SC,sans-serif' font-size='22' font-weight='700' fill='%234c3c5c'%3E陪伴的三个人%3C/text%3E%3C/svg%3E" alt="视频封面：浅紫背景上三个圆形头像与柔和的底部色带" width="640" height="360">
+            <span class="wk-play-dot" aria-hidden="true">▶</span>
+          </div>
+          <div class="wk-video-body">
+            <div class="wk-chip-row"><span class="wk-chip">人物访谈</span><span class="wk-chip">情感故事</span></div>
+            <h3>三个人，三种陪伴：我们把镜头交给长期用户</h3>
+            <p>一位考研生、一位新手父亲、一位退休教师。他们谈袜子，也谈那些需要被温柔对待的时刻。</p>
+            <div class="wk-video-foot">
+              <span class="wk-video-author"><span class="wk-mini-avatar" style="background:#977fb0">访</span>栏目组小满</span>
+              <span>播放 4.2万</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== S4 专题 / 企划 ===== -->
+  <section class="wk-section wk-topic-band" id="wk-topics" aria-labelledby="wk-topics-title">
+    <div class="wk-wrapper">
+      <div class="wk-section-head">
+        <h2 id="wk-topics-title"><small>专题企划</small>白棉袜vk 持续运营中的四个长期企划</h2>
+        <p class="wk-section-desc">每个企划都由官方发起、创作者共建，形成可追踪的内容生态，欢迎报名参与下一季拍摄。</p>
+      </div>
+      <div class="wk-topic-grid">
+
+        <article class="wk-topic-card is-wide">
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 720 450'%3E%3Crect width='720' height='450' fill='%23e8f0f2'/%3E%3Cg stroke='%23223c4e' stroke-width='2' fill='%23ffffff'%3E%3Crect x='70' y='80' width='180' height='270' rx='12'/%3E%3Crect x='280' y='130' width='180' height='220' rx='12'/%3E%3Crect x='490' y='60' width='160' height='290' rx='12'/%3E%3C/g%3E%3Cg fill='%23e08a3c'%3E%3Ccircle cx='160' cy='160' r='30'/%3E%3Ccircle cx='370' cy='210' r='26'/%3E%3Ccircle cx='570' cy='150' r='24'/%3E%3C/g%3E%3Cg stroke='%232f7d74' stroke-width='8' stroke-linecap='round'%3E%3Cpath d='M110 260h100M320 290h100M530 240h80'/%3E%3C/g%3E%3Ctext x='70' y='410' font-family='PingFang SC,sans-serif' font-size='24' font-weight='700' fill='%23223c4e'%3E一个人的衣柜%3C/text%3E%3C/svg%3E" alt="专题封面：三块白色展板并排陈列，配有橙色圆形标记" width="720" height="450">
+          <div>
+            <div class="wk-topic-headline">
+              <h3>一个人的衣柜：12 位创作者的日常穿搭影像</h3>
+              <span class="wk-status is-live">第三季更新中</span>
+            </div>
+            <p class="wk-topic-desc">我们把镜头交给真实用户，不摆拍、不修图，记录一周七天衣柜里的选择与犹豫。这个企划已经连续运营三季，成为社区里口碑最稳定的栏目之一。</p>
+            <ul class="wk-topic-list">
+              <li>第 3 期｜西装与白棉袜：一次正式场合的搭配复盘</li>
+              <li>第 4 期｜换季清仓前，我先拍了一遍自己的抽屉</li>
+              <li>第 5 期｜学生党 6 双袜子过一季的真实记录</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="wk-topic-card">
+          <div class="wk-topic-headline">
+            <h3>棉花从哪里来：供应链探访计划</h3>
+            <span class="wk-status">招募中</span>
+          </div>
+          <p class="wk-topic-desc">从产区到车间，官方带队拍摄棉纺供应链，面向社区开放 8 个随行名额。</p>
+          <ul class="wk-topic-list">
+            <li>第 1 站｜产区访谈：棉农的一年是怎么过的</li>
+            <li>第 2 站｜纺纱车间：为什么细度决定手感</li>
+            <li>第 3 站｜成品仓：一次抽检的完整记录</li>
+          </ul>
+        </article>
+
+        <article class="wk-topic-card">
+          <div class="wk-topic-headline">
+            <h3>三十天舒适挑战：每天一件小事</h3>
+            <span class="wk-status is-live">进行中</span>
+          </div>
+          <p class="wk-topic-desc">不追求改变人生，只要求每天做一件对脚部友好的小事。打卡满 21 天可获官方纪念徽章。</p>
+          <ul class="wk-topic-list">
+            <li>第 6 天｜把拖鞋换成棉袜，试试脚感差异</li>
+            <li>第 11 天｜通勤路线上多走一站</li>
+            <li>第 18 天｜给常穿的袜子做一次断舍离</li>
+          </ul>
+        </article>
+
+        <article class="wk-topic-card">
+          <div class="wk-topic-headline">
+            <h3>棉布上的字：插画与短片共创</h3>
+            <span class="wk-status">作品征集中</span>
+          </div>
+          <p class="wk-topic-desc">邀请插画师以「白棉袜」为母题创作，入选作品将改编为 60 秒短片并在官方首页展映。</p>
+          <ul class="wk-topic-list">
+            <li>入选作品 01｜《袜子的旅行》手绘分镜 24 幅</li>
+            <li>入选作品 02｜《洗》一组关于水与时间的版画</li>
+            <li>入选作品 03｜《白》极简线稿动画提案</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== S3/S15 关键词深度解析（品牌故事 + 深度解析，正文 800 字以上） ===== -->
+  <section class="wk-section wk-analysis" id="wk-analysis" aria-labelledby="wk-analysis-title">
+    <div class="wk-wrapper">
+      <div class="wk-section-head">
+        <h2 id="wk-analysis-title"><small>品牌深度解析</small>白棉袜vk 是什么：一个品牌与一种日常的八年对话</h2>
+        <p class="wk-section-desc">本节为官方发布的企业背景与理念解析，也是理解这个垂直领域内容生态的入口。</p>
+      </div>
+      <div class="wk-analysis-grid">
+        <figure class="wk-analysis-fig">
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 520 650'%3E%3Crect width='520' height='650' fill='%23f2f6f7'/%3E%3Cg stroke='%23c4d4db' stroke-width='2' fill='%23ffffff'%3E%3Crect x='60' y='60' width='400' height='170' rx='14'/%3E%3Crect x='60' y='255' width='400' height='150' rx='14'/%3E%3Crect x='60' y='430' width='400' height='150' rx='14'/%3E%3C/g%3E%3Cg fill='%23e08a3c'%3E%3Ccircle cx='120' cy='145' r='30'/%3E%3Ccircle cx='120' cy='330' r='26'/%3E%3Ccircle cx='120' cy='505' r='24'/%3E%3C/g%3E%3Cg stroke='%232f7d74' stroke-width='9' stroke-linecap='round'%3E%3Cpath d='M190 130h210M190 160h140M190 320h200M190 348h120M190 495h210M190 523h150'/%3E%3C/g%3E%3Ctext x='60' y='625' font-family='PingFang SC,sans-serif' font-size='19' font-weight='700' fill='%23223c4e'%3E八年 · 三个阶段%3C/text%3E%3C/svg%3E" alt="品牌解析配图：三块白色信息板自上而下排列，记录品牌八年三阶段" width="520" height="650">
+          <figcaption>白棉袜vk 的八年分为三个阶段：单品打磨期、内容沉淀期与社区共创期。每一阶段都留下了可查证的影像资料。</figcaption>
+        </figure>
+        <article class="wk-analysis-article">
+          <h3>从一个朴素的疑问开始：为什么袜子总被忽略</h3>
+          <p>八年前，白棉袜vk 的创始团队在一间只有两张桌子的工作室里讨论过一个问题：在人们的日常消费清单里，袜子几乎永远排在最后一位，但它却是每天与皮肤接触时间最长的衣物之一。这个反差成了品牌的原点。我们没有去找一个更大的故事，而是决定把一件小事讲清楚——<strong>白棉袜</strong>究竟能在多大程度上改善一个人的日常体验。</p>
+          <p>最初的产品只有一款白色的中筒纯棉袜，克重、纱支、罗口弹性都经过二十多轮打样。为了验证脚感，团队把样品寄给一百多位不同职业的测试者，回收了两百多条手写反馈。这些反馈后来成为官方视频栏目最早的素材，也解释了为什么白棉袜vk 从第一天起就带着「记录」的基因：我们习惯把过程和结论一起交出去，而不是只留下结论。</p>
+          <p>这也是品牌之后转向视频内容平台的底层原因。产品需要被理解，而理解需要上下文。一段十分钟的工厂跟拍，比一句参数描述更能让人明白为什么一双袜子值这个价。白棉袜vk 官方网站因此逐步搭建起一个以<strong>原创、正版、高清</strong>为标准的视频内容体系，并把它开放给社区创作者共同维护。</p>
+
+          <h3>垂直领域里的长期主义：内容生态如何长出来</h3>
+          <p>在袜子这样一个细分品类里做内容生态，最大的难题不是没人看，而是没人相信你能持续做。白棉袜vk 的做法是把更新节奏写进公开计划：每周三期常规更新、每月一期深度专题、每季度一次创作者招募。三年下来，栏目结构稳定，创作者从最初的 6 位扩展到 40 余位，题材也从产品测评延伸到通勤、运动、手作、育儿与城市探索。</p>
+          <p>我们把这套方法称为「慢而不断」。慢，意味着不追逐短期热点，一条关于车间质检的短片可以拍十四天；不断，意味着即使某个月数据不理想，栏目也不会停更。正因为如此，社区里逐渐形成了一种可以预期的信任：用户知道每周会有新内容，创作者知道投稿有出口，合作方知道品牌不会突然转向。作为行业领先的垂直内容平台之一，白棉袜vk 更愿意被形容为「持续运营的观察者」，而不是「突然出现的爆款制造者」。</p>
+          <p>在内容筛选上，官方编辑部坚持三条标准：一是真实，出镜者必须是真实用户或可核实的从业者；二是可复现，涉及测评与技巧的内容都要给出口径与步骤；三是克制，不夸大功效，不制造焦虑。这三条标准被写进了创作者协议，也成为社区口碑得以积累的原因。用户首选往往不是因为某一条视频足够惊艳，而是因为长期没有失望。</p>
+
+          <h3>品牌、创作者与用户之间的三方关系</h3>
+          <p>白棉袜vk 把自己定位为「连接者」。品牌提供拍摄资源、发布渠道与基础规范，创作者提供视角与专业度，用户提供反馈与二次传播。三方各司其职，内容生态才不至于变成单向的品牌宣传。为此，官方设立了创作者成长计划：新人可通过投稿入口上传作品，通过初审后获得官方指导；连续三个月稳定更新的作者，可以进入签约名录并获得拍摄支持与分成激励。</p>
+          <p>社区活力也来自具体的互动设计。每条视频下方都保留点赞、收藏、复制链接与反馈入口；每月一次的创作挑战赛设置公开投票；专题企划定期开放报名。这些机制看上去琐碎，但它们构成了一个可参与的结构。很多用户第一次投稿只是拍了自己整理抽屉的三分钟，后来却成了稳定的创作者。这正是我们理解的社会责任：给普通人一个被看见的位置，并且不要求他们先变得专业。</p>
+          <p>从数据上看，这种耐心是有回报的。官方网站目前累计上线一千二百余条原创视频，社区注册创作者与用户超过四十八万，用户口碑好评率稳定在九成以上。更重要的是内容结构的变化：早期八成内容是官方出品，现在官方与创作者的比例已接近四比六。这意味着平台正在从「品牌自述」走向「共同叙事」，而这正是白棉袜vk 想要的样子。</p>
+
+          <h3>接下来的方向：把舒适讲得更具体</h3>
+          <p>未来一年，白棉袜vk 会把重心放在三件事上。第一是完善「可复现测评」体系，为常见品类建立公开测试口径，让用户在看到参数时能自己判断；第二是扩大供应链探访计划，把镜头带进更多产区与车间，让品质不再只是一个形容词；第三是继续深耕社区，把投稿、报名、投票与线下放映做成常规动作，让内容生态保持流动。</p>
+          <p>我们也清楚，一个以袜子为起点的品牌能讲的故事有限。但有限不等于单薄。只要每天仍有人穿袜子出门、加班、跑步、接孩子放学，这些具体的场景就值得被记录。白棉袜vk 的官方网站不是一个展示柜，而是一间持续开门的工作室：欢迎你来看，也欢迎你带着自己的镜头加入。真实、温暖、有力量的内容，从来不是被策划出来的，而是被认真对待的生活留下的痕迹。</p>
+          <p class="wk-analysis-callout">以上内容为白棉袜vk 官方发布的品牌解析，相关数据来自官方网站公开运营月报，统计口径与更新周期以官方公告为准。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== S5 创作者矩阵：双列简介 ===== -->
+  <section class="wk-section" id="wk-creators" aria-labelledby="wk-creators-title" style="background:var(--wk-mist);border-block:1px solid var(--wk-line)">
+    <div class="wk-wrapper">
+      <div class="wk-section-head">
+        <h2 id="wk-creators-title"><small>创作者矩阵</small>白棉袜vk 社区的六位长期创作者</h2>
+        <p class="wk-section-desc">他们的作品构成内容生态的骨架。点击作者信息可查看简介，欢迎在评论区留下你的问题。</p>
+      </div>
+      <div class="wk-creator-grid">
+
+        <article class="wk-creator-card">
+          <span class="wk-avatar-lg" style="background:#2f7d74" aria-hidden="true">鹤</span>
+          <div>
+            <h3>棉线阿鹤 <span class="wk-creator-field">通勤穿搭</span></h3>
+            <p>服装设计出身，擅长把职业场景拆解成可执行的搭配方案。她的视频几乎不出现品牌标识，只讲版型、颜色和脚感，被社区称为「通勤穿搭的说明书」。</p>
+            <div class="wk-creator-nums"><span>作品 <b>86</b></span><span>粉丝 <b>7.4万</b></span><span>更新频率 每周 2 期</span></div>
+            <button class="wk-act wk-author-btn" type="button" data-author="棉线阿鹤" style="margin-top:11px">查看作者档案</button>
+          </div>
+        </article>
+
+        <article class="wk-creator-card">
+          <span class="wk-avatar-lg" style="background:#e08a3c" aria-hidden="true">周</span>
+          <div>
+            <h3>实验室老周 <span class="wk-creator-field">深度测评</span></h3>
+            <p>材料工程背景，做过十五年纺织检测。他坚持所有测评附上实验条件与原始数据，镜头里最多的是秤、卡尺和记录表。他的视频更新慢，但复看率长期排在前列。</p>
+            <div class="wk-creator-nums"><span>作品 <b>54</b></span><span>粉丝 <b>9.1万</b></span><span>更新频率 每两周 1 期</span></div>
+            <button class="wk-act wk-author-btn" type="button" data-author="实验室老周" style="margin-top:11px">查看作者档案</button>
+          </div>
+        </article>
+
+        <article class="wk-creator-card">
+          <span class="wk-avatar-lg" style="background:#3f6076" aria-hidden="true">跑</span>
+          <div>
+            <h3>跑者陈七 <span class="wk-creator-field">健康运动</span></h3>
+            <p>业余马拉松跑者，跑龄九年。他的内容几乎全部在户外完成，喜欢用真实配速与心率说话。夜跑系列是他的代表作，也带动了社区一批运动类投稿。</p>
+            <div class="wk-creator-nums"><span>作品 <b>73</b></span><span>粉丝 <b>6.2万</b></span><span>更新频率 每周 1 期</span></div>
+            <button class="wk-act wk-author-btn" type="button" data-author="跑者陈七" style="margin-top:11px">查看作者档案</button>
+          </div>
+        </article>
+
+        <article class="wk-creator-card">
+          <span class="wk-avatar-lg" style="background:#977fb0" aria-hidden="true">满</span>
+          <div>
+            <h3>栏目组小满 <span class="wk-creator-field">人物访谈</span></h3>
+            <p>官方栏目编导，负责访谈类内容。她擅长在四十分钟素材里剪出三分钟的有效对话，也愿意保留受访者的犹豫与沉默。她说，访谈的重点是听清楚而不是问漂亮。</p>
+            <div class="wk-creator-nums"><span>作品 <b>41</b></span><span>粉丝 <b>5.8万</b></span><span>更新频率 每月 2 期</span></div>
+            <button class="wk-act wk-author-btn" type="button" data-author="栏目组小满" style="margin-top:11px">查看作者档案</button>
+          </div>
+        </article>
+
+        <article class="wk-creator-card">
+          <span class="wk-avatar-lg" style="background:#2f7d74" aria-hidden="true">澄</span>
+          <div>
+            <h3>布头阿澄 <span class="wk-creator-field">手作DIY</span></h3>
+            <p>全职妈妈，手作爱好者。她的教程以「不用专业工具」著称，步骤清楚，失败也照拍。很多观众说，看她的视频会真的起身动手，而不是只收藏。</p>
+            <div class="wk-creator-nums"><span>作品 <b>112</b></span><span>粉丝 <b>8.8万</b></span><span>更新频率 每周 3 期</span></div>
+            <button class="wk-act wk-author-btn" type="button" data-author="布头阿澄" style="margin-top:11px">查看作者档案</button>
+          </div>
+        </article>
+
+        <article class="wk-creator-card">
+          <span class="wk-avatar-lg" style="background:#3f6076" aria-hidden="true">禾</span>
+          <div>
+            <h3>行业观察员苏禾 <span class="wk-creator-field">行业观察</span></h3>
+            <p>财经背景，长期跟踪消费与制造行业。她用公开数据解释价格与成本之间的关系，不预测涨跌，只负责把链条讲明白。她的内容常被读者当作入门材料。</p>
+            <div class="wk-creator-nums"><span>作品 <b>39</b></span><span>粉丝 <b>4.6万</b></span><span>更新频率 每月 3 期</span></div>
+            <button class="wk-act wk-author-btn" type="button" data-author="行业观察员苏禾" style="margin-top:11px">查看作者档案</button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== S6 用户口碑：评分摘要 + 短评列表 ===== -->
+  <section class="wk-section" id="wk-reviews" aria-labelledby="wk-reviews-title">
+    <div class="wk-wrapper">
+      <div class="wk-section-head">
+        <h2 id="wk-reviews-title"><small>用户口碑</small>来自社区的真实评价：白棉袜vk 值得信赖吗</h2>
+        <p class="wk-section-desc">以下评价来自社区用户主动提交，涵盖内容、产品与服务三个维度，未做删改。</p>
+      </div>
+      <div class="wk-review-wrap">
+        <aside class="wk-score-panel">
+          <b>4.7</b>
+          <div class="wk-score-stars" aria-hidden="true">★★★★★</div>
+          <p>综合评分 · 基于 3,861 条社区评价</p>
+          <div class="wk-score-bars">
+            <div class="wk-score-bar"><span>5 星</span><i><span style="width:78%"></span></i><span>78%</span></div>
+            <div class="wk-score-bar"><span>4 星</span><i><span style="width:15%"></span></i><span>15%</span></div>
+            <div class="wk-score-bar"><span>3 星</span><i><span style="width:5%"></span></i><span>5%</span></div>
+            <div class="wk-score-bar"><span>2 星</span><i><span style="width:1.5%"></span></i><span>1.5%</span></div>
+            <div class="wk-score-bar"><span>1 星</span><i><span style="width:.5%"></span></i><span>0.5%</span></div>
+          </div>
+        </aside>
+        <div class="wk-review-list">
+
+          <article class="wk-review-item">
+            <div class="wk-review-top">
+              <span class="wk-mini-avatar" style="background:#2f7d74">林</span>
+              <b>林间小径</b>
+              <time datetime="2026-11-18">11 月 18 日</time>
+            </div>
+            <p>关注这个平台两年多，最打动我的不是画质多好，而是他们真的会拍失败。手作那期有两次返工，没有剪掉，我照着做也失败了两次，反而觉得踏实。</p>
+            <div class="wk-review-tags"><span>内容真实</span><span>手作栏目</span></div>
+          </article>
+
+          <article class="wk-review-item">
+            <div class="wk-review-top">
+              <span class="wk-mini-avatar" style="background:#e08a3c">阿</span>
+              <b>阿布不加班</b>
+              <time datetime="2026-11-12">11 月 12 日</time>
+            </div>
+            <p>测评类内容做得比很多大平台都细，参数、条件、原始数据都给了。虽然更新慢一点，但我愿意等。唯一希望是能按品类筛选，现在找旧视频要翻。</p>
+            <div class="wk-review-tags"><span>深度测评</span><span>建议</span></div>
+          </article>
+
+          <article class="wk-review-item">
+            <div class="wk-review-top">
+              <span class="wk-mini-avatar" style="background:#3f6076">海</span>
+              <b>海边捡石头</b>
+              <time datetime="2026-11-06">11 月 6 日</time>
+            </div>
+            <p>陪爸妈一起看的，他们那一辈对棉制品特别有感情。专题里讲棉农的那一期，我爸看完了还跟我讲了他小时候的事，这个体验很难得。</p>
+            <div class="wk-review-tags"><span>陪伴</span><span>供应链专题</span></div>
+          </article>
+
+          <article class="wk-review-item">
+            <div class="wk-review-top">
+              <span class="wk-mini-avatar" style="background:#977fb0">小</span>
+              <b>小满的猫</b>
+              <time datetime="2026-10-29">10 月 29 日</time>
+            </div>
+            <p>投稿过一次，三分钟的视频，编辑给了很具体的修改建议，不是模板回复。虽然最后没入选，但我知道问题在哪了，这点很加分。</p>
+            <div class="wk-review-tags"><span>投稿体验</span><span>创作者</span></div>
+          </article>
+
+          <article class="wk-review-item">
+            <div class="wk-review-top">
+              <span class="wk-mini-avatar" style="background:#2f7d74">陈</span>
+              <b>陈三岁</b>
+              <time datetime="2026-10-21">10 月 21 日</time>
+            </div>
+            <p>播放很流畅，高清模式也不卡。就是我手机比较老，有些页面图片有点多，加载稍微慢一点。整体还是愿意给的推荐。</p>
+            <div class="wk-review-tags"><span>播放体验</span></div>
+          </article>
+
+          <article class="wk-review-item">
+            <div class="wk-review-top">
+              <span class="wk-mini-avatar" style="background:#e08a3c">跑</span>
+              <b>慢跑十年</b>
+              <time datetime="2026-10-14">10 月 14 日</time>
+            </div>
+            <p>夜跑那期我看了三遍，测试方法写得清楚。后来自己照着做了对照，结论基本一致。一个品牌愿意讲口径，说明它不怕被检验。</p>
+            <div class="wk-review-tags"><span>运动内容</span><span>可复现</span></div>
+          </article>
+
+          <article class="wk-review-item">
+            <div class="wk-review-top">
+              <span class="wk-mini-avatar" style="background:#3f6076">书</span>
+              <b>书房夜灯</b>
+              <time datetime="2026-10-03">10 月 3 日</time>
+            </div>
+            <p>不太喜欢的地方也有：访谈栏目有时候太克制了，问题不够尖锐。但我知道这是他们的风格，所以还是继续看，希望以后能有更长的对谈版本。</p>
+            <div class="wk-review-tags"><span>访谈栏目</span><span>建议</span></div>
+          </article>
+
+          <article class="wk-review-item">
+            <div class="wk-review-top">
+              <span class="wk-mini-avatar" style="background:#977fb0">禾</span>
+              <b>禾下乘凉</b>
+              <time datetime="2026-09-26">9 月 26 日</time>
+            </div>
+            <p>从行业观察那个系列进来的，没想到一个袜子品牌能把成本结构讲得这么清楚。看完之后我买东西会多看一眼标签，这是很实在的影响。</p>
+            <div class="wk-review-tags"><span>知识科普</span><span>行业观察</span></div>
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== S7 企业动态 + FAQ ===== -->
+  <section class="wk-section" id="wk-news" aria-labelledby="wk-news-title" style="background:var(--wk-mist);border-block:1px solid var(--wk-line)">
+    <div class="wk-wrapper">
+      <div class="wk-section-head">
+        <h2 id="wk-news-title"><small>企业动态与帮助</small>官方发布与企业动态，以及常见问题解答</h2>
+        <p class="wk-section-desc">公告、更新日志与常见问题统一在此发布，如有疑问可通过投稿入口或反馈按钮联系我们。</p>
+      </div>
+      <div class="wk-info-wrap">
+        <div class="wk-news-list">
+          <article class="wk-news-item">
+            <time datetime="2026-11-22">2026 / 11 / 22</time>
+            <h3>冬季纯棉系列正片上线，社区同步开放报名</h3>
+            <p>《一针一线的温度》4K 版本已上线官方网站，配套的线下放映与创作者见面会开放 60 个名额，报名截止 11 月 30 日。</p>
+          </article>
+          <article class="wk-news-item">
+            <time datetime="2026-11-19">2026 / 11 / 19</time>
+            <h3>创作挑战赛第三季启动，新增「日常记录」赛道</h3>
+            <p>本季共设三个赛道，投稿入口已开放。评审由官方编辑与六位社区创作者共同组成，投票环节向全体用户开放。</p>
+          </article>
+          <article class="wk-news-item">
+            <time datetime="2026-11-15">2026 / 11 / 15</time>
+            <h3>创作者成长计划签约 12 位新作者</h3>
+            <p>本期签约作者覆盖运动、手作、行业观察等方向，官方将提供拍摄支持与分成激励，并在首页推荐位给予曝光。</p>
+          </article>
+          <article class="wk-news-item">
+            <time datetime="2026-11-08">2026 / 11 / 08</time>
+            <h3>官方攻略手册《棉袜穿搭 30 讲》开放下载</h3>
+            <p>手册整合了三年来的实用内容，支持高清下载与离线收藏，后续将按月补充新章节。</p>
+          </article>
+          <article class="wk-news-item">
+            <time datetime="2026-10-30">2026 / 10 / 30</time>
+            <h3>内容生态月报：创作者投稿量环比增长 34%</h3>
+            <p>十月投稿量创年内新高，官方审核平均时长缩短至 41 小时，精品内容占比提升至 22%。</p>
+          </article>
+        </div>
+        <div class="wk-faq-card">
+          <details open>
+            <summary>白棉袜vk 是什么类型的内容平台？</summary>
+            <p>这是白棉袜vk 品牌运营的官方视频门户，聚焦纯棉袜品与舒适生活方式，内容涵盖品牌故事、深度测评、日常记录、人物访谈与手作教程，所有正片均为原创高清版本。</p>
+          </details>
+          <details>
+            <summary>如何参与创作挑战赛以及如何报名？</summary>
+            <p>点击页面顶部的投稿入口，选择对应赛道并填写基本信息、上传作品链接即可报名。初审通过后作品会进入官方展映，进入投票环节后将向全体社区用户开放。</p>
+          </details>
+          <details>
+            <summary>投稿的作品会用于商业用途吗？</summary>
+            <p>投稿作品默认仅在官方网站与官方账号展映，作者保留署名权。如需用于其他商业场景，官方会单独沟通并签署授权协议，不做默认授权。</p>
+          </details>
+          <details>
+            <summary>视频支持下载或离线观看吗？</summary>
+            <p>官方攻略手册与部分专题资料支持高清下载，常规视频内容提供在线高清播放与收藏功能，便于随时回看。后续会逐步开放更多可下载内容。</p>
+          </details>
+          <details>
+            <summary>测评数据是怎么来的，可以复核吗？</summary>
+            <p>涉及测评的内容会同步公开测试条件、样本数量与原始记录口径。用户可以按公开方法自行复测，如有偏差欢迎通过反馈入口提交证据，编辑部会跟进说明。</p>
+          </details>
+          <details>
+            <summary>社区有哪些互动方式？</summary>
+            <p>可以点赞、收藏、复制链接分享，也可以在评论区留言提问；每月开放一次投票与投稿，专题企划期间还会开放线下活动报名与非公开场次。</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 合作品牌墙 ===== -->
+  <section class="wk-section wk-partner-band" aria-labelledby="wk-partner-title">
+    <div class="wk-wrapper">
+      <div class="wk-section-head">
+        <h2 id="wk-partner-title"><small>合作伙伴</small>与白棉袜vk 共同维护内容生态的伙伴</h2>
+        <p class="wk-section-desc">长期合作的内容机构与产业伙伴，共同参与影像出品与线下活动的持续运营。</p>
+      </div>
+      <div class="wk-partner-grid">
+        <div class="wk-partner"><b>棉行工坊</b><span>产业合作 · 供应链探访</span></div>
+        <div class="wk-partner"><b>城市放映室</b><span>内容合作 · 线下放映</span></div>
+        <div class="wk-partner"><b>织见影像</b><span>影像出品 · 联合制作</span></div>
+        <div class="wk-partner"><b>日常研究所</b><span>研学合作 · 深度测评</span></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== S8 页脚 ===== -->
+<footer class="wk-footer">
+  <div class="wk-wrapper">
+    <div class="wk-footer-grid">
+      <div class="wk-footer-brand">
+        <b>白棉袜vk</b>
+        <p>白棉袜vk 官方网站，专注纯棉袜品与舒适生活方式的原创高清视频内容平台。我们以真实、温暖、有力量的影像记录日常，与创作者共同构建值得信赖的内容生态。</p>
+        <p class="wk-footer-slogan">持续运营 · 用户至上 · 品牌长期主义</p>
+      </div>
+      <div class="wk-footer-col">
+        <h3>内容</h3>
+        <a href="#wk-spotlight">焦点内容</a>
+        <a href="#wk-videos">视频社区</a>
+        <a href="#wk-topics">专题企划</a>
+        <a href="#wk-analysis">品牌解析</a>
+      </div>
+      <div class="wk-footer-col">
+        <h3>社区</h3>
+        <a href="#wk-creators">创作者矩阵</a>
+        <a href="#wk-reviews">用户口碑</a>
+        <a href="#wk-news">企业动态</a>
+        <a href="#wk-top">回到首页</a>
+      </div>
+      <div class="wk-footer-col">
+        <h3>官方</h3>
+        <span>投稿与合作：通过页面投稿入口提交</span>
+        <span>内容更新：每周三期 · 每月一期专题</span>
+        <span>反馈渠道：各视频条目下方反馈按钮</span>
+      </div>
+    </div>
+    <div class="wk-footer-bottom">
+      <span>© 2026 白棉袜vk 官方网站 · 版权所有 · 持续运营中</span>
+      <span>备案号：京 ICP 备 2026000000 号 · 内容均系原创或授权发布</span>
+    </div>
+  </div>
+</footer>
+
+<div class="wk-toast" id="wk-toast" role="status" aria-live="polite"></div>
+<button class="wk-top-btn" id="wk-top-btn" type="button" aria-label="回到顶部">↑</button>
+
+<!-- 投稿弹窗 -->
+<div class="wk-modal" id="wk-submit-modal" hidden style="position:fixed;inset:0;z-index:300;display:flex;align-items:center;justify-content:center;padding:18px;background:rgba(20,32,40,.62);">
+  <div role="dialog" aria-modal="true" aria-labelledby="wk-modal-title" style="background:#fff;border-radius:16px;max-width:520px;width:100%;padding:24px 24px 22px;box-shadow:0 30px 60px -24px rgba(12,22,28,.6);">
+    <h2 id="wk-modal-title" style="font-size:19px;color:#223c4e;margin-bottom:6px;">投稿入口 · 创作挑战赛报名</h2>
+    <p style="font-size:13.5px;color:#556c78;margin-bottom:14px;">填写作品标题与联系方式，官方编辑部将在 3 个工作日内回复初审意见。</p>
+    <form id="wk-submit-form">
+      <label style="display:block;font-size:13px;color:#33454f;margin-bottom:4px;">作品标题</label>
+      <input type="text" required placeholder="例如：我的抽屉整理记录" style="width:100%;border:1px solid #d8e1e6;border-radius:10px;padding:10px 12px;font-size:14px;margin-bottom:12px;outline:none;">
+      <label style="display:block;font-size:13px;color:#33454f;margin-bottom:4px;">联系方式</label>
+      <input type="text" required placeholder="邮箱或社区昵称" style="width:100%;border:1px solid #d8e1e6;border-radius:10px;padding:10px 12px;font-size:14px;margin-bottom:16px;outline:none;">
+      <div style="display:flex;gap:10px;justify-content:flex-end;">
+        <button type="button" class="wk-btn wk-btn-ghost" id="wk-submit-cancel">取消</button>
+        <button type="submit" class="wk-btn wk-btn-primary">提交报名</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- 移动端导航折叠 ---------- */
+  var navToggle = document.getElementById('wk-nav-toggle');
+  var nav = document.getElementById('wk-nav');
+  if (navToggle && nav) {
+    navToggle.addEventListener('click', function(){
+      var open = nav.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      navToggle.textContent = open ? '收起' : '菜单';
+    });
+    nav.addEventListener('click', function(e){
+      if (e.target.tagName === 'A' && window.innerWidth <= 780) {
+        nav.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.textContent = '菜单';
+      }
+    });
+  }
+
+  /* ---------- Toast ---------- */
+  var toastEl = document.getElementById('wk-toast');
+  var toastTimer = null;
+  function showToast(msg){
+    if (!toastEl) return;
+    toastEl.textContent = msg;
+    toastEl.classList.add('is-on');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){
+      toastEl.classList.remove('is-on');
+    }, 2600);
+  }
+
+  /* ---------- 搜索前端反馈 ---------- */
+  var searchForm = document.getElementById('wk-search-form');
+  var searchInput = document.getElementById('wk-search-input');
+  var searchFeedback = document.getElementById('wk-search-feedback');
+  var keywordsIndex = ['白棉袜vk','纯棉','一针一线','通勤','测评','收纳','夜跑','手作','访谈','供应链','行业观察','挑战赛','创作者','专题'];
+  if (searchForm && searchInput) {
+    searchForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      var q = searchInput.value.trim();
+      if (!q) {
+        searchFeedback.textContent = '请输入关键词后再搜索，例如：白棉袜vk、测评、手作。';
+        searchFeedback.classList.add('is-on');
+        return;
+      }
+      var hit = keywordsIndex.filter(function(k){ return k.indexOf(q) > -1 || q.indexOf(k) > -1; });
+      if (hit.length) {
+        searchFeedback.textContent = '已为你匹配到 ' + hit.length + ' 个相关方向：' + hit.slice(0,4).join('、') + '，可浏览下方焦点内容与视频社区。';
+      } else {
+        searchFeedback.textContent = '暂无与「' + q + '」完全匹配的条目，已按关键词记录，编辑部会在后续更新中优先安排。';
+      }
+      searchFeedback.classList.add('is-on');
+    });
+    searchInput.addEventListener('input', function(){
+      if (!searchInput.value.trim()) {
+        searchFeedback.classList.remove('is-on');
+      }
+    });
+  }
+
+  /* ---------- 点赞 +1 / -1 ---------- */
+  document.querySelectorAll('.wk-like').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var countEl = btn.querySelector('.wk-like-count');
+      var base = parseInt(btn.getAttribute('data-count') || '0', 10);
+      var liked = btn.classList.toggle('is-liked');
+      var next = liked ? base + 1 : base;
+      if (countEl) countEl.textContent = next.toLocaleString('zh-CN');
+      showToast(liked ? '已点赞，感谢你的支持' : '已取消点赞');
+    });
+  });
+
+  /* ---------- 收藏切换 ---------- */
+  document.querySelectorAll('.wk-save').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var on = btn.classList.toggle('is-saved');
+      btn.innerHTML = on ? '<span aria-hidden="true">★</span> 已收藏' : '<span aria-hidden="true">☆</span> 收藏';
+      showToast(on ? '已收藏，可在个人中心查看' : '已取消收藏');
+    });
+  });
+
+  /* ---------- 复制链接 ---------- */
+  document.querySelectorAll('.wk-copy').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var title = btn.getAttribute('data-title') || '白棉袜vk 官方内容';
+      var text = '白棉袜vk 官方网站 · ' + title;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function(){
+          showToast('链接信息已复制：' + text);
+        }).catch(function(){
+          showToast('已为你准备好分享内容：' + text);
+        });
+      } else {
+        showToast('已为你准备好分享内容：' + text);
+      }
+    });
+  });
+
+  /* ---------- 反馈弹窗提示 ---------- */
+  document.querySelectorAll('.wk-report').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      showToast('反馈入口已记录，请描述具体问题以便官方跟进');
+    });
+  });
+
+  /* ---------- 回复作者档案 ---------- */
+  document.querySelectorAll('.wk-author-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var name = btn.getAttribute('data-author') || '创作者';
+      showToast(name + ' 的完整档案包含作品清单与合作方式，可在创作者矩阵中查看');
+    });
+  });
+
+  /* ---------- 首屏分享 ---------- */
+  var shareHero = document.getElementById('wk-share-hero');
+  if (shareHero) {
+    shareHero.addEventListener('click', function(){
+      var text = '白棉袜vk 官方网站 · 纯棉生活方式影像平台';
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function(){
+          showToast('官方首页分享信息已复制，可粘贴到微信或微博');
+        }).catch(function(){
+          showToast('分享内容：' + text);
+        });
+      } else {
+        showToast('分享内容：' + text);
+      }
+    });
+  }
+
+  /* ---------- 投稿弹窗 ---------- */
+  var modal = document.getElementById('wk-submit-modal');
+  var submitOpen = document.getElementById('wk-submit-open');
+  var submitCancel = document.getElementById('wk-submit-cancel');
+  var submitForm = document.getElementById('wk-submit-form');
+  function openModal(){
+    if (!modal) return;
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(){
+    if (!modal) return;
+    modal.hidden = true;
+    document.body.style.overflow = '';
+  }
+  if (submitOpen) submitOpen.addEventListener('click', openModal);
+  if (submitCancel) submitCancel.addEventListener('click', closeModal);
+  if (modal) {
+    modal.addEventListener('click', function(e){
+      if (e.target === modal) closeModal();
+    });
+  }
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && modal && !modal.hidden) closeModal();
+  });
+  if (submitForm) {
+    submitForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      closeModal();
+      submitForm.reset();
+      showToast('报名已提交，官方编辑部将在 3 个工作日内联系你');
+    });
+  }
+
+  /* ---------- 回到顶部 ---------- */
+  var topBtn = document.getElementById('wk-top-btn');
+  if (topBtn) {
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 520) topBtn.classList.add('is-on');
+      else topBtn.classList.remove('is-on');
+    }, { passive: true });
+    topBtn.addEventListener('click', function(){
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ---------- 卡片悬停动效增强（键盘可聚焦） ---------- */
+  document.querySelectorAll('.wk-video-card, .wk-creator-card').forEach(function(card){
+    card.setAttribute('tabindex', '0');
+  });
+})();
+</script>
+</body>
+                                                                                                                       </html>
